@@ -1,0 +1,103 @@
+
+#break{
+	clear:left;
+}
+
+#board {
+	background-color: black;
+	height: 900px;
+	width: 1850px;
+
+}
+
+.card {
+	width: 200px;
+	background-color: white;
+	height: 350px;
+	margin: 40px;
+	float: left;
+	border-radius:20px;
+	border:10px black solid;
+	cursor:pointer;}
+
+.card:hover{
+	border: 10px yellow outset;
+}
+
+.highlighted{
+
+	border: 10px red ridge;
+
+}
+
+.purple {
+		content: "";
+		display: block;
+		width:50px;
+		height :50px;
+		position:relative;
+		top:40px;
+		left:70px;
+		background-color:purple;
+		border: 5px purple solid;
+		margin-bottom:40px;
+}
+
+.red {
+
+		content: "";
+		display: block;
+		width:50px;
+		height :50px;
+		position:relative;
+		top:40px;
+		left:70px;
+		background-color:red;
+		border: 5px red solid;
+		margin-bottom:40px;
+}
+
+
+
+.green {
+		content: "";
+		display: block;
+		width:50px;
+		height :50px;
+		position:relative;
+		top:40px;
+		left:70px;
+		background-color:green;
+		border: 5px green solid;
+		margin-bottom: 40px;
+
+}
+
+.full
+{
+	opacity:1;
+}
+
+
+.striped
+{
+	background-image: url(stripes.png);
+}
+
+.transparent
+{
+	background-color: white;
+}
+
+.square
+{}
+
+.circle
+{
+	border-radius: 50px;
+}
+
+.diamond
+{
+	-webkit-transform:rotate(45deg);
+}
