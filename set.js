@@ -227,7 +227,7 @@ function handle_touch(e) {
 					cardsimilarities ++;
 				}
 			// comment the next line out if you want to disable cheat mode(all 3 cards are sets)	
-			//cardsimilarities ++;			
+			cardsimilarities ++;			
 		};
 		checkset('color');
 		checkset('fill');
