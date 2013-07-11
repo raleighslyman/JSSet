@@ -53,14 +53,14 @@ function numberchanger(card, number){
 	if (card.number==0)
 	{	
 		$("#card" + number).append('<div class="shape" id ="shape'+number+'"></div>');	
-		$("#shape" + number).css("top", "140px");		
+		$("#shape" + number).css("top", "40%");		
 	}
 
 	else if (card.number==1)
 	{	
 		$("#card" + number).append('<div class="shape" id ="shape'+number+'"></div>');	
 		$("#card" + number).append('<div class="shape" id ="shape'+number+'"></div>');	
-		$("div#shape" + number).css("top", "100px");
+		$("div#shape" + number).css("top", "28%");
 	}
 
 	else if (card.number==2)
@@ -68,7 +68,7 @@ function numberchanger(card, number){
 		$("#card" + number).append('<div class="shape" id ="shape'+number+'"></div>');	
 		$("#card" + number).append('<div class="shape" id ="shape'+number+'"></div>');	
 		$("#card" + number).append('<div class="shape" id ="shape'+number+'"></div>');	
-		$("div#shape" + number).css("bottom", "80px");
+		$("div#shape" + number).css("bottom", "18%");
 	}
 	else
 	{

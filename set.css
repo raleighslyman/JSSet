@@ -3,22 +3,35 @@
 	clear:left;
 }
 
-#board {
+#board{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	background-color: black;
-	height: 900px;
-	width: 1850px;
+}
 
+#scorebox {
+  position: relative;
+  border: 10px white ridge;
+  width: 30%;
+  height: 3%;
+  bottom: 2%;
+  left: 32%;
+  background-color: white;
 }
 
 .card {
-	width: 200px;
+	width: 10%;
 	background-color: white;
-	height: 350px;
-	margin: 40px;
+	height: 25%;
+	margin: 2.5%;
 	float: left;
-	border-radius:20px;
+	border-radius:8%;
 	border:10px black solid;
-	cursor:pointer;}
+	cursor:pointer;
+}
 
 .card:hover{
 	border: 10px yellow outset;
@@ -33,28 +46,27 @@
 .purple {
 		content: "";
 		display: block;
-		width:50px;
-		height :50px;
+		width: 23%;
+		height: 15%;
 		position:relative;
-		top:40px;
-		left:70px;
+		top:13%;
+		left:37%;
 		background-color:purple;
 		border: 5px purple solid;
-		margin-bottom:40px;
+		margin-bottom:20%;
 }
 
 .red {
-
 		content: "";
 		display: block;
-		width:50px;
-		height :50px;
+		width: 23%;
+		height: 15%;
 		position:relative;
-		top:40px;
-		left:70px;
+		top:13%;
+		left:37%;
 		background-color:red;
 		border: 5px red solid;
-		margin-bottom:40px;
+		margin-bottom:20%;
 }
 
 
@@ -62,14 +74,14 @@
 .green {
 		content: "";
 		display: block;
-		width:50px;
-		height :50px;
+		width: 23%;
+		height: 15%;
 		position:relative;
-		top:40px;
-		left:70px;
+		top:13%;
+		left:37%;
 		background-color:green;
 		border: 5px green solid;
-		margin-bottom: 40px;
+		margin-bottom:20%;
 
 }
 
