@@ -5,11 +5,12 @@ var deck;
 
 function create_deck(){
 	deck = [];
+	var colors = ['green', 'purple', 'red'];
 	for (var color=0; color<3; color++) {
 		for (var shape=0; shape<3; shape++) {
 			for (var fill=0; fill<3; fill++) {
 				for (var number=0; number<3; number++) {
-					deck.push ({color: color, shape: shape, fill: fill, number: number, selected: false})
+					deck.push ({color: colors[color], shape: shape, fill: fill, number: number, selected: false})
 				}	
 			}
 		}
@@ -76,25 +77,7 @@ function numberchanger(card, number){
 }
 //changes the shapes of the cards
 function colorchanger(card, place){
-
-	if (card.color==0)
-	{
-		$("div#shape" + place).addClass("purple");
-	}
-
-	else if (card.color==1)
-	{
-		$("div#shape" + place).addClass("red");
-	}
-
-	else if (card.color==2)
-	{
-		$("div#shape" + place).addClass("green");
-	}
-
-	else {	
-		alert ("PROBLEM!!  unrecognized card data.")
-	}
+	$("div#shape" + place).addClass(card.color);
 }
 //changes the fill in the card
 function fillchanger(card, place){
@@ -115,7 +98,8 @@ function fillchanger(card, place){
 		$("div#shape" + place).addClass("transparent");
 	}
 
-	else {
+	else
+	{
 		alert ("PROBLEM!!  unrecognized card data.")
 	}
 }
@@ -166,25 +150,22 @@ $('.card').on('click', handle_touch);
 $('.card').on('touchend', handle_touch);
 
 
+function get_selected_card_info(whichcard) {
+	// find the card that was just clicked on
+	//returns the information
+	for (var i=0; i<cards_in_play.length; i++) {
+		if ("card"+cards_in_play[i].id == whichcard) {
+			return cards_in_play[i];
+		}
+	}
+}
 
 
 function handle_touch(e) {
-	var card = $(this);
 	var whichcard = this.id;
 	console.log('card: '+whichcard);
-	var card;
-
-	// find the card that was just clicked on
-	//stores the information in that card to var card
-	for (var i=0; i<cards_in_play.length; i++) {
-
-		if ("card"+cards_in_play[i].id == whichcard) {
-
-			card = cards_in_play[i];
-			console.log(card)
-		}
-	}
-
+	var card = get_selected_card_info(whichcard);
+	console.log(card);
 	console.log("BEFORE: card is now "+card.selected);
 
 
@@ -246,7 +227,7 @@ function handle_touch(e) {
 					cardsimilarities ++;
 				}
 			// comment the next line out if you want to disable cheat mode(all 3 cards are sets)	
-			cardsimilarities ++;			
+			//cardsimilarities ++;			
 		};
 		checkset('color');
 		checkset('fill');
