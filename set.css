@@ -12,16 +12,6 @@
 	background-color: black;
 }
 
-#scorebox {
-  position: relative;
-  border: 10px white ridge;
-  width: 30%;
-  height: 3%;
-  bottom: 2%;
-  left: 32%;
-  background-color: white;
-}
-
 .card {
 	width: 10%;
 	background-color: white;
@@ -30,7 +20,7 @@
 	float: left;
 	border-radius:8%;
 	border:10px black solid;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .card:hover{
